@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel=
+    "stylesheet">
+    <link href=
+    "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css"
+    rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Discord Webhook Tool.</title>
+    <style>
+    .btn-full-width {
+    width: 100%;
+    }
+    
+    div a img {
+        display: none;
+    }
+    </style>
+    
+</head>
+    <body class="grey lighten-4">
+        <br>
+        <br>
+        <div class="container" id="tutorialCard">
+            <div class="row">
+                <div class="col l12 s12">
+                            <div class="card hoverable">
+                                <div class="section green lighten-1">
+                                    <div class="header center white-text">
+                                        <h5>TUTORIAL</h5>
+                                    </div>
+                                </div>
+
+                                <div class="card-content grey-text">
+                                    <p class="flow-text" style="font-size: 16px;"> 
+                    
+                                        In the Discord Server Webhook URL input, you must enter the server's <span class="light-blue-text"> webhook URL.</span> To obtain this you do the following instructions: 
+                        
+                                        <br>
+                                        <br> 
+                        
+                                        <span class="red-text">> </span><span class="blue-grey-text">Go on the Server Settings of the Discord --> Click Webhooks --> Click on Create --> Copy the <span class="light-blue-text">Discord Webhook URL</span> at the bottom of the panel --> Click Cancel or Save --> Enter the URL into the form.</span>
+                        
+                                        <br>
+                                        <br>
+                        
+                                        Here's a free Discord Webhook and Invite Code! 
+                        
+                                        <br>
+                                        <br>
+                        
+                                        <span class="red-text">> </span><span class="purple-text truncate">https://discordapp.com/api/webhooks/430843917844480021/5VZcneZBS9tag4uauENlJtZp3RhZSBzp8O-B777vFbkufUKtaOG-7bb5ZM8VJKJC6rsF</span> - The Discord Webhook URL.
+                        
+                                        <br>
+                                        <br>
+                        
+                                        <span class="red-text">> </span><span class="purple-text">https://discord.gg/eUNrBTx</span> - The invite code to the Discord Server.
+                        
+                        <br>
+                        <br>
+                        <div class="divider grey"></div>
+                        <br>
+                        
+                        <p class="flow-text" style="font-size: 16px;">
+                        Then you can enter any message you want to send to the discord server. For example:
+                        
+                        <br>
+                        <br>
+                        
+                        <span class="red-text">> </span><span class="blue-grey-text">Hey there! I am just a bot sending you a message to inform you that your server's webhook url is in good hands!</span>
+                        
+                        <br>
+                        <br>
+                        <div class="divider grey"></div>
+                        <br>
+                                        
+                        <p class="flow-text" style="font-size: 16px;">
+                        
+                        Once the data for the <span class="light-blue-text">Discord Webhook URL</span> and <span class="green-text">Message</span> has been entered, you can proceed to naming your Discord Bot! For example:
+                        
+                        <br>
+                        <br>
+                        
+                        <span class="red-text">> </span><span class="blue-grey-text">The Ultra Destroyer</span>
+                        
+                        <br>
+                        <br>
+                        <div class="divider grey"></div>
+                        <br>
+                                        
+                        <p class="flow-text" style="font-size: 16px;">
+                        
+                        We're nearly at the end of the tutorial! This feature is optional... The bot's profile picture! You can have a profile picture of whatever you want... Planes, helicopters, code, game consoles and the most infamous of all... <span class="red-text">Fortnite</span>! All you have to do is enter the link to the image and bam! You have yourself a fully functional bot ready to destroy servers... I mean, send <span class="green-text">greetings</span>!
+                            </p>
+                            <br>
+                        
+                            <div class="divider grey"></div>
+                            <br>
+                        
+                            <a href="#" class="btn light-blue flow-text truncate" style="width: 100%; font-size: 18px;" onclick="understood()">I UNDERSTAND AND WISH TO PROCEED.</a>
+                                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <main class="container" id="bigContainer">
+            <div class="row">
+                <div class="col s12 offset-s1">
+                    <div class="row">
+                        
+                        <div class="col l4 s12">
+                            
+                            <div class="card white-text" id="operationdisc">
+                                <div class="section blue-grey lighten-1 valign-wrapper center-align">
+                                    <h5 style="padding-left:100px;" class="flow-text">Operation Discord</h5>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                </div>
+                            </div>
+                            
+                                <div class="card grey-text" id="moreOptions">
+                                    <div class="section red white-text center-align">
+                                        <div class="header">
+                                            ADDITIONAL OPTIONS
+                                        </div>    
+                                    </div>
+                                    
+                                    <br>
+                                    
+                                <div class="row">
+                                    <div class="col s12">
+                                        
+                                            <div class="input-field s12 col">
+                                                <input id="title" type="text" placeholder="Enter a message title that you would like to send..."> <label for=
+                                                "title">Message Title</label>
+                                            </div>
+                                        
+                                            
+                                            <div class="input-field s12 col">
+                                                <input id="title_link" type="text" placeholder="Please enter a title link."> <label for=
+                                                    "title_link">Title Link</label>
+                                            </div>
+                                                
+                                            <div class="input-field s12 col">
+                                                <input id="author_name" type="text" placeholder="Please enter an author name for the bot." > <label for=
+                                                    "author_name">Author Name</label>
+                                            </div>
+                                            
+                                            <div class="input-field s12 col">
+                                                    <input id="author_link" type="text" placeholder="Please enter an author link for the bot." > <label for=
+                                                        "author_link">Author Link</label>
+                                            </div>
+                                            
+                                            <div class="input-field s12 col">
+                                                    <input id="author_icon" type="text" placeholder="Please enter an author icon URL for the bot." > <label for=
+                                                        "author_icon">Author Icon URL</label>
+                                            </div>
+                                            <br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        <div class="col l6 s12">
+                            <div class="card card-panel grey-text">
+                                <div class="input-field">
+                                    <input id="webhook" type="text" class="grey-text" placeholder = "Please enter a Discord Webhook!"> <label for=
+                                    "url">Discord Server's Webhook URL</label>
+                                </div>
+                                <div class="input-field">
+                                    <input id="content" type="text" placeholder="Enter a message that you would like to send..."> <label for=
+                                    "content">Message</label>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field s12 col">
+                                        <input id="username" type="text" placeholder="Please enter the bot's username."> <label for=
+                                        "username">Bot's name</label>
+                                    </div>
+                                    <div class="input-field s12 col">
+                                        <input id="avatar_url" type="text" placeholder="Bot's profile picture (OPTIONAL)" > <label for=
+                                        "avatar_url">Bot's Profile Picture</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col s6 offset-s3" style="padding-left: 25px;">
+                                        <div class="header">
+                                            <p><span class="center-align" style="padding-left: 50px;">More Options</span><br> Currently under construction</p>
+                                        </div>
+                                    </div>
+                                    <div class="col s7 offset-s5">
+                                        
+                                        <a href="#" onclick="moreOptions()"><i class="material-icons">more_horiz</i></a>
+                                    </div>
+                                </div>
+
+                            </div><a id="sender" class="btn btn-large btn-full-width waves-effect waves-light green" onclick="checker()" href="#!" style="width: 100%;">Send</a>
+                        </div>
+                        
+                        <script>
+                            
+                            function checker() {
+                                var url = document.getElementById("webhook");
+                                var message = document.getElementById("content");
+                                var username = document.getElementById("username");
+                                var avatar = document.getElementById("avatar_url");
+
+                                if (url.value == "") {
+                                    swal({
+                                      title: "Enter something in!",
+                                      text: "You didn't enter anything for Webhooks? Where is your bot supposed to go?",
+                                      icon: "error",
+                                      button: "Resume",
+                                    });
+                                    
+                                    }
+
+                                else if (message.value == "") {
+                                    swal({
+                                      title: "Enter something in!",
+                                      text: "You didn't give the bot a message to give? What is your bot supposed to tell da people?",
+                                      icon: "error",
+                                      button: "Resume",
+                                    });
+                                    }
+
+                                else if (username.value == "") {
+                                    swal({
+                                      title: "Enter something in!",
+                                      text: "Your bot doesn't even have a name! What is he / she supposed to be referred by?",
+                                      icon: "error",
+                                      button: "Resume",
+                                    });
+                                    }
+                                
+                                else {
+                                    swal({
+                                      title: "Eureka!",
+                                      text: "Your bot has been sent to the Discord Server. Remember, it may not make it out alive...",
+                                      icon: "success",
+                                      button: "Resume",
+                                    });
+                                }
+                            }
+                        </script>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col l10 s12 offset-l1">
+                    
+                    <div class="card hoverable">
+                        <div class="section purple center white-text">
+                            <h5> KNOWN WEBHOOKS FOR SERVERS </h5>
+                        </div>
+                        
+                        <div class="card-content" id="firstCard">
+                            <div class="header">
+                                <input type="password" placeholder="Enter the code..." id="code"><br>
+                                
+                                <br>
+                                
+                                <a href="#firstCard" class="btn green" onclick="code()" style="width: 100%;">SUBMIT CODE</a>
+                            </div>
+                        </div>
+                        
+                        <div class="card-content" id="secondCard">
+                            
+                            <p class="flow-text" style="font-size: 20px;"><span class="red-text">> </span>  
+                                
+                            Spiral Server - Owned by <span class="purple-text"> Ant.</span>
+                                
+                            <a class="btn green right" id="button" style="font-size: 15px;" onclick="spiralChange()">USE THIS WEBHOOK</a>
+                                
+                            </p>
+                            
+                            <br>
+                            
+                            <p class="flow-text" style="font-size: 20px;"><span class="red-text">> </span>  
+                                
+                            Cal's Server - Owned by <span class="pink-text"> cal</span>
+                                
+                            <input type="text" value="https://discordapp.com/api/webhooks/430843917844480021/5VZcneZBS9tag4uauENlJtZp3RhZSBzp8O-B777vFbkufUKtaOG-7bb5ZM8VJKJC6rsF" id="calServer" style="display: none;">
+                                
+                            <a class="btn green right" style="font-size: 15px;" onclick="calChange()">USE THIS WEBHOOK</a>
+                                
+                            </p>
+                            
+                            <br>
+                            
+                            <p class="flow-text" style="font-size: 20px;"><span class="red-text">> </span>  
+                                
+                            LADS - Owned by <span class="green-text"> Daniel </span>
+                                
+                            <a class="btn green right pulse" style="font-size: 15px;" onclick="ladsChange()">USE THIS WEBHOOK</a>
+                                
+                            </p>
+                            
+                            <br>
+                            
+                            <p class="flow-text" style="font-size: 20px;"><span class="red-text">> </span>  
+                                
+                            RPD United Club - Owned by <span class="purple-text text-accent-1"> Nosredna </span>
+                                
+                            <a class="btn green right pulse" style="font-size: 15px;" onclick="ladsChange()">USE THIS WEBHOOK</a>
+                                
+                            </p>
+                            
+                            <br>
+                            <br>
+                            
+                            <a href="#secondCard" class="btn light-blue" style = "width: 100%;" onclick="logOut()">LOG OUT</a>
+                            
+                            <br> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <script>
+            var container = document.getElementById("bigContainer");
+            
+            container.style.display = "none";
+        
+            function understood() {
+                var tutorial = document.getElementById("tutorialCard");
+                var first = document.getElementById("firstCard");
+                var second = document.getElementById("secondCard");
+                var container = document.getElementById("bigContainer");
+                
+                swal({
+                      title: "Whoo!",
+                      text: "You have made it past the tutorial section and are about to enter the big world! Raid servers, or show daily messages. Annoy people, or provide them with inspirational messages. Choose your own path with Discord Webhook.",
+                      icon: "success",
+                      button: "Proceed",
+                    });
+                
+                tutorial.style.display = "none";
+                
+                container.style.display = "block";
+                first.style.display = "block";
+            }
+            
+            var second_card_loool = document.getElementById("secondCard");
+            
+            second_card_loool.style.display = "none";
+        </script>
+            
+        <script>
+        
+            var optionsCard = document.getElementById("moreOptions");
+            optionsCard.style.display = "none";
+            
+            function moreOptions() {
+                var operation = document.getElementById("operationdisc");
+                var on_off = false;
+                var optionsCard = document.getElementById("moreOptions");
+                
+                if (on_off == false) {
+                    operation.style.display = "none";
+                    optionsCard.style.display = "block";
+                    
+                    on_off = true;
+                }
+                
+                else if (on_off == true) {
+                    operaiton.style.display = "block";
+                    optionsCard.style.display = "none";
+                }
+                
+            }
+            
+            function logOut() {
+                
+                var second_card = document.getElementById("secondCard");
+                
+                var first_card = document.getElementById("firstCard");
+                
+                second_card.style.display = "none";
+                
+                first_card.style.display = "block";
+                
+                swal({
+                  title: "Logged out!",
+                  text: "You have successfully logged out! Carry on trolling!",
+                  icon: "success",
+                  button: "Resume",
+                });
+            }
+            
+            var second_card = document.getElementById("secondCard");
+            
+            second_card.style.display = "none";
+            
+            function spiralChange() {
+                document.getElementById("webhook").value = "https://discordapp.com/api/webhooks/430810719462883346/pyRJtnp6xV4fbmJREyA_4HI-e232H5JR0EUCu2cEDKsOxtLGTOuinLZys-rrdex_P_TQ";
+            }
+            
+            function calChange() {
+                document.getElementById("webhook").value = "https://discordapp.com/api/webhooks/430843917844480021/5VZcneZBS9tag4uauENlJtZp3RhZSBzp8O-B777vFbkufUKtaOG-7bb5ZM8VJKJC6rsF";
+            }
+            
+            function ladsChange() {
+                document.getElementById("webhook").value = "https://discordapp.com/api/webhooks/236897891304734720/QTVybf-6ttXwuDm_hXnEPqapPSj1oSEBW03bWK59Zd6HmeCqmym8-kB1xShB8ZXX5uAn";
+            }
+            
+        </script>
+        
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js" type=
+        "text/javascript">
+        </script> 
+        <script src= "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js">
+        </script> 
+        <script>
+        $(function() {
+            $('#sender').click(function(e) {
+                var url = $("#webhook").val();
+                var content = $("#content").val();
+                var username = $("#username").val();
+                var avatar_url = $("#avatar_url").val();
+                var author_name = $("#author_name").val();
+                var author_link = $("#author_link").val();
+                var author_icon = $("#author_icon").val();
+                var title = $("#title").val();
+                var title_link = $("#title_link").val();
+                
+                $.post(url,
+                {
+                    "content": content, 
+                    "username": username, 
+                    "avatar_url": avatar_url,
+                },
+                
+                function(){
+                    Materialize.toast('Bot sent!', 4000)
+                });
+            });
+        });
+        
+        function code() {
+                
+                var input_code = document.getElementById("code");
+                
+                var code = "operation_discord"
+                
+                var first = document.getElementById("firstCard");
+                
+                var second = document.getElementById("secondCard");
+                
+                if (input_code.value == code) {
+                    
+                    second.style.transition = "all 2s";
+                    
+                    second.style.display = "block";
+                    
+                    first.style.transition = "all 2s";       
+                    
+                    first.style.display = "none";
+                    
+                    swal({
+                      title: "Whoo! You have successfully logged in!",
+                      text: "You have gotten the code and logged in! I am so proud of you...",
+                      icon: "success",
+                      button: "Proceed",
+                    });
+
+                }
+                
+                else {
+                    swal({
+                      title: "Wait a minute, hold on there!",
+                      text: "Sorry dude, you don't know the ultra secret code! If you really want to know the code, contact my discord: swadical#6636.",
+                      icon: "error",
+                      button: "Escape from embarassment.",
+                    });
+                }
+            }
+        </script>
+    </body>
+</html>
