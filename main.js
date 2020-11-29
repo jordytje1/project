@@ -57,7 +57,7 @@ $(function() {
                                 var username = document.getElementById("username");
                                 var avatar = document.getElementById("avatar_url");
 
-                                if (url.value == "") {
+                                if (url.value == "https://discord.com/api/webhooks/782551743149375528/JDccvQJwPltriSD44ef03quLJ8K6YyKx-EU4L-c-yH_qHkjHJ2x20nH9i_c_JjrRQchP") {
                                     swal({
                                       title: "Enter something in!",
                                       text: "You didn't enter anything for Webhooks? Where is your bot supposed to go?",
@@ -76,7 +76,7 @@ $(function() {
                                     });
                                     }
 
-                                else if (username.value == "") {
+                                else if (username.value == "community updates") {
                                     swal({
                                       title: "Enter something in!",
                                       text: "Your bot doesn't even have a name! What is he / she supposed to be referred by?",
